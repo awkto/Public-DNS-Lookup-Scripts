@@ -6,3 +6,4 @@ echo "Cloudflare : "$(dig gis-manulife-dev.com @ns0005.secondary.cloudflare.com.
 
 
 #this script is incomplete and not working
+#remove these 2 lines once script is in working state
