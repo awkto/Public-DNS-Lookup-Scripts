@@ -9,6 +9,8 @@
 domainlist=$1
 resolver=$2
 
+echo "The target md5sum is 0617414fee3e217474d496dc7ac9104a (2 cloudflare, 2 csc ns records)"
+
 for domain in $(cat $domainlist );do \
 	echo "NS record MD5sum is " \
 	$(dig NS +short $domain @$resolver \
@@ -18,3 +20,5 @@ for domain in $(cat $domainlist );do \
 	" for domain : " \
 	$domain ;
 done
+
+echo "The target md5sum is 0617414fee3e217474d496dc7ac9104a (2 cloudflare, 2 csc ns records)"
