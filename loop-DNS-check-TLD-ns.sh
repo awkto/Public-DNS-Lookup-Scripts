@@ -20,7 +20,8 @@ for TLD in $(echo com net org info ca); do \
 			$(dig @$domainTLDns NS +norecurse $domain\
 			|grep -A4 "AUTHORITY SECTION"|grep -v AUTHORITY |sort|awk {'print $5'}|md5sum)\
 			" FOR DOMAIN "\
-			$domain;
+			$domain; \
+			sleep 0.2; \
 	done;
 done
 
